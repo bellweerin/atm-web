@@ -13,6 +13,15 @@ public class Customer {
 
     public Customer(){}
 
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pin='" + pin + '\'' +
+                '}';
+    }
+
     public Customer(int id, String name, String pin) {
         this.id = id;
         this.name = name;
