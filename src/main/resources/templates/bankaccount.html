@@ -33,9 +33,7 @@
     <hr>
 
 
-    <form th:action="@{/bankaccount/delete/{id}(id=${account.id})}" method="POST">
-        <button type="submit" class="btn btn-danger">Delete</button>
-    </form>
+
 
 
     <h1>All Bank Accounts</h1>
@@ -64,4 +62,10 @@
         </tr>
         </tbody>
     </table>
+    <form th:action="@{/bankaccount/delete/{id}(id=${account.id})}" method="POST">
+        <input type ="hidden" name = "customerId" value = "-1"/>
+        <input type ="hidden" name = "balance" value = "-1"/>
+        <input type ="hidden" name = "id" value = "-1"/>
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
 </div>
