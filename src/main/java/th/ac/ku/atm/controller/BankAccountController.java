@@ -55,35 +55,35 @@ public class BankAccountController {
         return "redirect:/bankaccount";
     }
 
-//    @GetMapping("/withdraw/{id}")
-//    public String getWithdrawPage(@PathVariable int id, Model model) {
-//        BankAccount account = bankAccountService.getBankAccount(id);
-//        model.addAttribute("bankAccount", account);
-//        return "withdraw";
-//    }
-//
-//
-//    @PostMapping("/withdraw/{id}")
-//    public String withdraw(@PathVariable int id, @ModelAttribute BankAccount bankAccount, Model model) {
-//        bankAccountService.withdraw(id, bankAccount);
-//        model.addAttribute("bankAccount", bankAccountService.getBankAccounts());
-//        return "redirect:/bankaccount";
-//    }
-//
-//    @GetMapping("/deposit/{id}")
-//    public String getDepositPage(@PathVariable int id, Model model) {
-//        BankAccount account = bankAccountService.getBankAccount(id);
-//        model.addAttribute("bankAccount", account);
-//        return "withdraw";
-//    }
-//
-//
-//    @PostMapping("/deposit/{id}")
-//    public String deposit(@PathVariable int id, @ModelAttribute BankAccount bankAccount, Model model) {
-//        bankAccountService.deposit(id, bankAccount);
-//        model.addAttribute("bankAccount", bankAccountService.getBankAccounts());
-//        return "redirect:/bankaccount";
-//    }
-//
+    @GetMapping("/withdraw/{id}")
+    public String getWithdrawPage(@PathVariable int id, Model model) {
+        BankAccount account = bankAccountService.getBankAccount(id);
+        model.addAttribute("bankAccount", account);
+        return "withdraw";
+    }
+
+
+    @PostMapping("/withdraw/{id}")
+    public String withdraw(@PathVariable int id, @ModelAttribute BankAccount bankAccount, Model model) {
+        bankAccountService.withdraw(id, bankAccount);
+        model.addAttribute("bankAccount", bankAccountService.getBankAccounts());
+        return "redirect:/bankaccount";
+    }
+
+    @GetMapping("/deposit/{id}")
+    public String getDepositPage(@PathVariable int id, Model model) {
+        BankAccount account = bankAccountService.getBankAccount(id);
+        model.addAttribute("bankAccount", account);
+        return "withdraw";
+    }
+
+
+    @PostMapping("/deposit/{id}")
+    public String deposit(@PathVariable int id, @ModelAttribute BankAccount bankAccount, Model model) {
+        bankAccountService.deposit(id, bankAccount);
+        model.addAttribute("bankAccount", bankAccountService.getBankAccounts());
+        return "redirect:/bankaccount";
+    }
+
 
 }
